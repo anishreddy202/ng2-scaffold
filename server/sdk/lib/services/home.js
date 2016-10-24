@@ -19,7 +19,7 @@ const Service = function (configuration, token) {
   let self = this;
   let continueWith = null;
 
-  let getInfo = function(args) {
+  let getInfo = function() {
 
     let response = {
       name: 'IRVUI',

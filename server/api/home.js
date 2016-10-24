@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../config/environment');
-const ThingSpace = require('../sdk').Services.User;
+const ThingSpace = require('../sdk').Services.Home;
 
 router.get('/', function(req, res){
   let dto =  req.body;

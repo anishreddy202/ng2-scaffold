@@ -20,7 +20,8 @@
     "start": "node server/index.js & npm run serve",
     "serve": "webpack-dev-server --inline --progress",
     "build": "rimraf dist && NODE_ENV='production' webpack --config config/webpack.prod.js -p --progress --bail && npm run copy",
-    "copy": "webpack --config config/webpack.copy.js"
+    "copy": "webpack --config config/webpack.copy.js",
+    "test:server": "NODE_ENV='test' mocha server --recursive"
   },
   "license": "MIT",
   "dependencies": {
@@ -46,6 +47,7 @@
     "@types/node": "^6.0.45",
     "angular2-template-loader": "^0.5.0",
     "awesome-typescript-loader": "^2.2.4",
+    "chai": "^4.0.0-canary.1",
     "copy-webpack-plugin": "^4.0.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
