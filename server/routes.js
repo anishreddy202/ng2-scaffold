@@ -22,5 +22,4 @@ module.exports = function (app) {
       console.log(req.url);
       res.sendFile(path.resolve('client' + '/index.html'));
   });
-
 };

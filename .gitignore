@@ -12,10 +12,14 @@
 /e2e/*.map
 protractor-results.txt
 
+#Test Coverages
+/coverage
 
 #System Files
 .DS_Store
 Thumbs.db
+
+
 
 #Environment Files
 .env
