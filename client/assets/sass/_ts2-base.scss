@@ -1,0 +1,90 @@
+body {
+  font-size: 1.4rem;
+  font-family:"ThingSpace";
+  font-weight: 400;
+  color: $black;
+}
+h1 {
+  font-size: 6rem;
+  color: $red;
+	font-weight: 700;
+}
+h2 {
+  font-size: 4.8rem;
+  color: $red;
+	font-weight: 700;
+}
+h3 {
+  font-size: 3.5rem;
+	font-weight: 600;
+}
+h4 {
+  font-size: 3rem;
+	font-weight: 600;
+}
+h5 {
+  font-size: 2.4rem;
+	font-weight: 600;
+}
+h6 {
+  font-size: 2rem;
+	font-weight: 600;
+}
+p {
+  font-size: 1.8rem;
+  // font-weight: 600;
+}
+p.callout-paragraph {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+p {
+  a {
+    // color: $anchor;
+    &:hover {
+      // color: $anchor-hover;
+    }
+  }
+}
+a {
+  // font-size: 1.6rem;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// RESPONSIVE STYLES FOR COMPONENT GO HERE 
+@media (max-width: 991px) { 
+	p.callout-paragraph {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 767px) { 
+	h1 {
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 2.8rem;
+	}
+	h3 {
+		font-size: 2.5rem;
+	}
+	h4 {
+		font-size: 2.1rem;
+	}
+	h5 {
+		font-size: 2rem;
+	}
+	h6 {
+		font-size: 1.8rem;
+	}
+	p {
+		font-size: 1.6rem;
+	}
+	// p.callout-paragraph {
+ //  	font-size: 2rem;
+	// }
+}
+

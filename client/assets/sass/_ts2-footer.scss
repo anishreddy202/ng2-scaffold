@@ -1,0 +1,104 @@
+.footer__ts2 {
+	min-height: 90px;
+	&__nav {
+		padding-top: 15px;
+		border-top: 1px solid $black20;
+	}
+	&__menu {
+		margin-bottom: 5px;
+		padding: 0;
+		display: inline-block;
+		list-style-type: none;
+		&__list {
+			display: inline-block;
+			&--link {
+				margin-right: 0px;
+				padding: 0 15px;
+				color: $black42;
+				font-size: 1.4rem;
+				border-right: 1px solid $black20;
+				&--first {
+					padding-left: 0;
+				}
+				&--last {
+					border-right: 0;
+				}
+				&:hover {
+					color: $black80;
+				}
+			}
+		}
+	}
+	&__sn {
+		display: inline-block;
+		float: right;
+		&__list {
+			margin-right: 5px;
+			display: inline-block;
+			&--link {
+				color: $black42;
+				font-size: 3.4rem;
+				&:hover {
+					color: $black80;
+				}
+			}
+		}
+	}
+	&__copy {
+		&--copyright {
+			font-size: 1.2rem;
+			color: $black42;
+		}
+	}
+}
+
+// RESPONSIVE STYLES FOR COMPONENT GO HERE
+@media (max-width: 991px) {
+	.footer__ts2 {
+		&__menu {
+			&__list--link {
+				padding: 0 8px;
+				font-size: 1.3rem;
+			}
+			&__list--link--first {
+		    padding-left: 0;
+			}
+		}
+		&__sn__list--link {
+			font-size: 2.8rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer__ts2 {
+		&__menu {
+			display: block;
+			text-align: center;
+			&__list {
+				display: block;
+				&--link {
+					padding: 5px 0;
+					border-right: 0;
+					display: block;
+				}
+			}
+		}
+		&__sn {
+			padding: 0;
+			float: none;
+			display: block;
+			text-align: center;
+			&__list--last {
+				margin-right: 0;
+			}
+			&__list--link {
+				font-size: 2.8rem;
+			}
+		}
+		&__copy {
+			margin-bottom: 10px;
+			text-align: center;
+		}
+	}
+}

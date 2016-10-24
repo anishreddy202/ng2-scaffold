@@ -1,0 +1,203 @@
+// http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom
+
+// Declare icon font
+@include font-face('icons', '#{$font-path}/icons');
+
+//
+// Icon Font: icons
+//
+
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-account:before,
+.icon-activation:before,
+.icon-alert-circle:before,
+.icon-angle-right-bold:before,
+.icon-arrow-circle-down:before,
+.icon-arrow-left:before,
+.icon-arrow-right:before,
+.icon-certification:before,
+.icon-check:before,
+.icon-check-square-off:before,
+.icon-check-square-on:before,
+.icon-checkmark-circle:before,
+.icon-close-bold:before,
+.icon-connectivity-management-circle:before,
+.icon-device-messaging-circle:before,
+.icon-devices-circle:before,
+.icon-edit:before,
+.icon-edit-circle:before,
+.icon-envelop-circle:before,
+.icon-error:before,
+.icon-exclamation-circle:before,
+.icon-fb-circle:before,
+.icon-hardware:before,
+.icon-key:before,
+.icon-linkedin-circle:before,
+.icon-minus:before,
+.icon-personal-cloud-storage-circle:before,
+.icon-plus:before,
+.icon-refresh:before,
+.icon-save:before,
+.icon-search:before,
+.icon-sms-circle:before,
+.icon-software:before,
+.icon-trash:before,
+.icon-ts-circle:before,
+.icon-twitter-circle:before,
+.icon-user:before,
+.icon-youtube-circle:before {
+  display: inline-block;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-account:before { content: "\f100"; }
+.icon-activation:before { content: "\f11e"; }
+.icon-alert-circle:before { content: "\f10d"; }
+.icon-angle-right-bold:before { content: "\f119"; }
+.icon-arrow-circle-down:before { content: "\f103"; }
+.icon-arrow-left:before { content: "\f104"; }
+.icon-arrow-right:before { content: "\f102"; }
+.icon-certification:before { content: "\f11f"; }
+.icon-check:before { content: "\f11a"; }
+.icon-check-square-off:before { content: "\f11c"; }
+.icon-check-square-on:before { content: "\f11d"; }
+.icon-checkmark-circle:before { content: "\f10e"; }
+.icon-close-bold:before { content: "\f112"; }
+.icon-connectivity-management-circle:before { content: "\f109"; }
+.icon-device-messaging-circle:before { content: "\f10a"; }
+.icon-devices-circle:before { content: "\f123"; }
+.icon-edit:before { content: "\f116"; }
+.icon-edit-circle:before { content: "\f10f"; }
+.icon-envelop-circle:before { content: "\f110"; }
+.icon-error:before { content: "\f122"; }
+.icon-exclamation-circle:before { content: "\f111"; }
+.icon-fb-circle:before { content: "\f105"; }
+.icon-hardware:before { content: "\f120"; }
+.icon-key:before { content: "\f118"; }
+.icon-linkedin-circle:before { content: "\f106"; }
+.icon-minus:before { content: "\f125"; }
+.icon-personal-cloud-storage-circle:before { content: "\f10b"; }
+.icon-plus:before { content: "\f113"; }
+.icon-refresh:before { content: "\f117"; }
+.icon-save:before { content: "\f114"; }
+.icon-search:before { content: "\f11b"; }
+.icon-sms-circle:before { content: "\f10c"; }
+.icon-software:before { content: "\f121"; }
+.icon-trash:before { content: "\f115"; }
+.icon-ts-circle:before { content: "\f124"; }
+.icon-twitter-circle:before { content: "\f107"; }
+.icon-user:before { content: "\f101"; }
+.icon-youtube-circle:before { content: "\f108"; }
+
+$font-icons-account: "\f100";
+$font-icons-activation: "\f11e";
+$font-icons-alert-circle: "\f10d";
+$font-icons-angle-right-bold: "\f119";
+$font-icons-arrow-circle-down: "\f103";
+$font-icons-arrow-left: "\f104";
+$font-icons-arrow-right: "\f102";
+$font-icons-certification: "\f11f";
+$font-icons-check: "\f11a";
+$font-icons-check-square-off: "\f11c";
+$font-icons-check-square-on: "\f11d";
+$font-icons-checkmark-circle: "\f10e";
+$font-icons-close-bold: "\f112";
+$font-icons-connectivity-management-circle: "\f109";
+$font-icons-device-messaging-circle: "\f10a";
+$font-icons-devices-circle: "\f123";
+$font-icons-edit: "\f116";
+$font-icons-edit-circle: "\f10f";
+$font-icons-envelop-circle: "\f110";
+$font-icons-error: "\f122";
+$font-icons-exclamation-circle: "\f111";
+$font-icons-fb-circle: "\f105";
+$font-icons-hardware: "\f120";
+$font-icons-key: "\f118";
+$font-icons-linkedin-circle: "\f106";
+$font-icons-minus: "\f125";
+$font-icons-personal-cloud-storage-circle: "\f10b";
+$font-icons-plus: "\f113";
+$font-icons-refresh: "\f117";
+$font-icons-save: "\f114";
+$font-icons-search: "\f11b";
+$font-icons-sms-circle: "\f10c";
+$font-icons-software: "\f121";
+$font-icons-trash: "\f115";
+$font-icons-ts-circle: "\f124";
+$font-icons-twitter-circle: "\f107";
+$font-icons-user: "\f101";
+$font-icons-youtube-circle: "\f108";
+
+// List icons
+$icons: (
+    account: "\f100",
+    activation: "\f11e",
+    alert-circle: "\f10d",
+    angle-right-bold: "\f119",
+    arrow-circle-down: "\f103",
+    arrow-left: "\f104",
+    arrow-right: "\f102",
+    certification: "\f11f",
+    check: "\f11a",
+    check-square-off: "\f11c",
+    check-square-on: "\f11d",
+    checkmark-circle: "\f10e",
+    close-bold: "\f112",
+    connectivity-management-circle: "\f109",
+    device-messaging-circle: "\f10a",
+    devices-circle: "\f123",
+    edit: "\f116",
+    edit-circle: "\f10f",
+    envelop-circle: "\f110",
+    error: "\f122",
+    exclamation-circle: "\f111",
+    fb-circle: "\f105",
+    hardware: "\f120",
+    key: "\f118",
+    linkedin-circle: "\f106",
+    minus: "\f125",
+    personal-cloud-storage-circle: "\f10b",
+    plus: "\f113",
+    refresh: "\f117",
+    save: "\f114",
+    search: "\f11b",
+    sms-circle: "\f10c",
+    software: "\f121",
+    trash: "\f115",
+    ts-circle: "\f124",
+    twitter-circle: "\f107",
+    user: "\f101",
+    youtube-circle: "\f108",
+);
+
+// Use to apply icons
+@mixin icon($position: before, $icon: false, $styles: true) {
+    @if $position == both {
+        $position: 'before, &:after';
+    }
+    &:#{$position} {
+        @if $icon {
+            content: "#{map-get($icons, $icon)}";
+        }
+        @if $styles {
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-family: 'icons';
+        }
+        @content;
+    }
+}

@@ -1,0 +1,132 @@
+$asset-pipeline: 					false !default;
+$font-path:               "fonts" !default;
+$max-width:								1170px;
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	// overflow-x: hidden;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input:focus {
+	border: 0;
+	outline: 0;
+}
+input[type="checkbox"] + label:before {
+	content: "";
+	margin-right: 0px;
+	padding-top: 1px;
+	top: 2px;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 13px;
+	position: relative;
+}
+input[type="checkbox"]:checked + label:before {
+	content: "\F11A";
+	margin-top: 0px;
+	padding-left: 1px;
+	padding-top: 0px;
+	top: -1px;
+	color: #959595;
+	font-family: "icons";
+}
+.container {
+  padding: 0;
+  max-width: $max-width;
+}
+.centered-block {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover,
+.nav > li > a:focus, 
+.nav > li > a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+.open {
+	display: block;
+}
+// .openIt {
+// 	display: block;
+// 	transition: all .5s ease;
+// 	overflow-y: hidden !important;
+// }
+.menuOpen {
+	display: block;
+	transition: all .5s ease;
+	height: 255px !important;
+	overflow-y: hidden !important;
+}
+.menuClose {
+	display: block;
+	transition: all .5s ease;
+	overflow: hidden;
+}
+// .collapsing {
+//   position: relative;
+//   height: 0;
+//   overflow: hidden;
+//   -webkit-transition-timing-function: ease;
+//   -o-transition-timing-function: ease;
+//   transition-timing-function: ease;
+//   -webkit-transition-duration: 1s;
+//   -o-transition-duration: 1s;
+//   transition-duration: 1s;
+//   -webkit-transition-property: height,visibility;
+//   -o-transition-property: height,visibility;
+//   transition-property: height,visibility;
+// }
+.subnavbarSpacer {
+	padding: 60px 0px 0px;
+	min-height: 40px;
+	// min-height: 120px;
+}
+.subnavbarSpacer--extender {	
+	min-height: 120px;
+}
+.enhanced {
+	font-weight: 700;
+}
+.form-control::-moz-placeholder {
+  color: #cbcbcb;
+}
+.icon-refresh {
+	color: $red;
+	&:hover, &:focus {
+		color: $red;
+		text-decoration: none;
+	}
+}
+.disclaimer {
+  font-size: 12px;
+}
+
+.img-wrapper {
+  margin-bottom: 70px;
+  padding: 20px;
+  img {
+    margin: 0 auto 0px;
+  }
+}
+
+// RESPONSIVE STYLES FOR COMPONENT GO HERE 
+@media (max-width: 767px) { 
+	.img-responsive {
+		width: 100%;
+	}
+}

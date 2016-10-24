@@ -1,0 +1,79 @@
+.btn__ts2 {
+	padding: 8px 25px;
+	min-width: 135px;
+	background-color: $red;
+	color: $white;
+	border-radius: 0;
+	font-size: 1.6rem;
+	font-weight: 500;
+	&:hover, &:active {
+		color: $white;
+		background-color: $red-medium;
+		box-shadow: none;
+	}
+	&:focus {
+		color: $white;
+		background-color: $red-dark;
+	}
+	&--icon {
+		margin-left: 10px;
+		font-size: 1.4rem;
+	}
+	&--link {
+		color: $black;
+		background-color: transparent;
+		&:hover, &:focus, &:active {
+			color: $black;
+			background-color: transparent;
+			box-shadow: none;
+		}
+		.btn__ts2--icon {
+			color: $red;
+		}
+	}
+	&--inverse {
+		color: $red;
+		border: 1px solid $red;
+		background-color: $white;
+	}
+	&--gray {
+		background-color: #959595;
+		&:hover, &:active {
+			background-color: #333333;
+		}
+		&:focus {
+			background-color: $black;
+		}
+	}
+	+ .btn__ts2 {
+		margin-left: 5px;
+	}
+	&__wrapper {
+		&--left {
+			text-align: left;
+			display: inline-block;
+			float: left;
+		}
+		&--right {
+			text-align: right;
+			display: inline-block;
+			float: right;
+		}
+	}
+	&[disabled], &--disabled {
+		background-color: $black42;
+	}
+}
+
+// RESPONSIVE STYLES FOR COMPONENT GO HERE 
+@media (max-width: 767px) { 
+	.btn__ts2 {
+		padding: 5px 10px;
+		min-width: 100px;
+		font-size: 1.4rem;
+		&--icon {
+			margin-left: 5px;
+			font-size: 1.2rem;
+		}
+	}
+}
