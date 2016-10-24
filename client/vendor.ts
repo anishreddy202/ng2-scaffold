@@ -7,5 +7,4 @@ import '@angular/http';
 import '@angular/forms';
 import '@angular/router';
 
-import 'angular2-cookie/core';
 import 'rxjs/Observable';
