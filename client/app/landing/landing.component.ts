@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http }  from '@angular/http';
 
 @Component({
   selector: 'landing',
@@ -8,10 +9,14 @@ export class LandingComponent implements OnInit {
   name: string;
   message: string;
 
-  constructor() { }
+  constructor(private _http: Http) { }
 
   ngOnInit() {
-    this.name = 'IRVUI';
-    this.message = "Irving User Interface Team";
+    this._http.get('/ui/api/home').subscribe((res: any) => {
+	    var response = res.json();
+	    this.name = response.data.name;
+	    this.message = response.data.message;
+	    // this.dataContainer.nativeElement.innerHTML = response;
+	});
   }
 }
