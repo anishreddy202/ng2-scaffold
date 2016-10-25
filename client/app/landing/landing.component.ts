@@ -13,9 +13,9 @@ export class LandingComponent implements OnInit {
 
   ngOnInit() {
     this._http.get('/ui/api/home').subscribe((res: any) => {
-	    var response = res.json();
-	    this.name = response.data.name;
-	    this.message = response.data.message;
+	  var response = res.json();
+	  this.name = response.data.name;
+	  this.message = response.data.message;
 	    // this.dataContainer.nativeElement.innerHTML = response;
 	});
   }
