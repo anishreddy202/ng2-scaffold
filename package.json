@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node server/index.js & npm run serve",
-    "serve": "webpack-dev-server --inline --progress",
+    "serve": "webpack-dev-server --host 0.0.0.0 --port 9100 --inline --progress",
     "build": "rimraf dist && NODE_ENV='production' webpack --config config/webpack.prod.js -p --progress --bail && npm run copy",
     "copy": "webpack --config config/webpack.copy.js",
     "test": "npm run test:client && npm run test:server",
@@ -43,9 +43,11 @@
     "async": "^2.1.2",
     "bunyan": "^1.8.3",
     "bunyan-format": "^0.2.1",
+    "chart.js": "^2.5.0",
     "core-js": "^2.4.1",
     "express": "^4.14.0",
     "lodash": "^4.16.4",
+    "ng2-charts": "^1.5.0",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.26"

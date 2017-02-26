@@ -65,6 +65,7 @@ module.exports = {
   devServer: {
   	contentBase: './client',
   	stats: 'minimal',
+    historyApiFallback: true,
   	proxy: {
         '/ui/**': {
             target: 'http://localhost:9000'

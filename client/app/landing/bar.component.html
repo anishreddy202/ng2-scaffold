@@ -1,0 +1,22 @@
+<div style="display:flex">
+  <div style="display: block">
+    <canvas style="width:500px;height:300px" baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+  <div style="width:100%">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>FXOL</th>
+      </tr>
+    </thead>
+  </table>
+  </div>
+</div>

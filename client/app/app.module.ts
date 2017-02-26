@@ -13,7 +13,7 @@ import { AppComponent }     from './app.component';
 
 // Setup routing
 export const routes: Route[] = [
-  { path: '**', redirectTo: '' },
+  // { path: '**', redirectTo: '' },
   
 ];
 
@@ -28,7 +28,7 @@ export const routes: Route[] = [
     declarations: [
       AppComponent,
       NavBarComponent,
-      FooterComponent,
+      FooterComponent
     ],
     providers: [
     ],
