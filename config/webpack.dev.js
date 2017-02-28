@@ -27,7 +27,7 @@ module.exports = {
       test: /\.html$/,
       loader: 'html'
     }, {
-            test: /\.(png|jpe?g|jpg|gif|svg|mp4|woff|woff2|ttf|eot|ico)$/,
+            test: /\.(png|jpeg|jpg|gif|svg|mp4|woff|woff2|ttf|eot|ico)$/,
             exclude: /node_modules/,
             loader: 'url-loader?limit=1000&name=assets/[name].[hash].[ext]'
         }, {

@@ -1,5 +1,5 @@
 /* -----------------------------------
-          TS-WEB 2.0 COLORS 
+          TS-WEB 2.0 COLORS
   ----------------------------------- */
 
 /*------ PRIMARY ----------------*/
@@ -36,7 +36,7 @@ $green-light: 						 #81ccaa;
 
 $black60:                 lighten($black, 40%);   /* #656565 */
 $black40:                 lighten($black, 60%);   /* #999999 */
-// $white93:                 $white92;     
+// $white93:                 $white92;
 // $white87:                 darken($white, 13%);    /* #dddddd */
 // $ts-red:                  $red-regular;
 // $ts-contactus:            $white92;
@@ -45,3 +45,12 @@ $black40:                 lighten($black, 60%);   /* #999999 */
 // $color-yellow:            $yellow-dark;
 // $color-red:               $red-regular;
 // $dropdown-menu:           $white95;
+
+td {
+  border-right:1px solid #CCC
+}
+
+.scrollit {
+    overflow:scroll;
+    height:500px;
+}

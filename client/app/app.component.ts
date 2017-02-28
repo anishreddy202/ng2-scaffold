@@ -5,6 +5,7 @@ require("../assets/main.scss");
 @Component({
     selector: 'app',
     template: `
+      <navbar></navbar>
       <router-outlet></router-outlet>
     `,
 })

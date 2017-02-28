@@ -1,8 +1,11 @@
 import { NgModule, ModuleWithProviders}   from '@angular/core';
 import { Route, RouterModule }            from '@angular/router';
+import { BrowserModule } 					  from '@angular/platform-browser';
+import { FormsModule }      				from '@angular/forms';
 import { LandingComponent }               from './landing.component';
 import { BarComponent }                 from './bar.component';
 import { ChartsModule } from 'ng2-charts';
+import { LandingService }               from './landing.service';
 
 // Setup routing
 const routes: Route[] = [
@@ -14,11 +17,16 @@ const routes: Route[] = [
 
   imports: [
     RouterModule.forChild(routes),
+    BrowserModule,
+    FormsModule,
     ChartsModule
   ],
   declarations: [
     LandingComponent,
     BarComponent
+  ],
+  providers:[
+    LandingService
   ]
 })
 

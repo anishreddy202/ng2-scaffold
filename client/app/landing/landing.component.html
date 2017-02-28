@@ -21,34 +21,35 @@
         <th>Time</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><a>217</a></td>
-        <td>41224975</td>
-        <td>FX</td>
-        <td>A1132745</td>
-        <td>S</td>
-        <td>USD</td>
-        <td>100.00</td>
-        <td>1.2174000</td>
-        <td>EUR</td>
-        <td>02/24/2017</td>
-        <td>Auto</td>
-        <td>Hayes Julie</td>
-        <td>STATEU</td>
-        <td>FXCL20</td>
-        <td>Trade Booked</td>
-        <td>false</td>
-        <td>02/22/17</td>
+    <tbody >
+      <tr *ngFor="let doc of table1Data">
+        <td><a data-toggle="modal" data-target="#myModal">{{doc.detail}}</a></td>
+        <td>{{doc.tradeId}}</td>
+        <td>{{doc.tradeId}}</td>
+        <td>{{doc.type}}</td>
+        <td>{{doc.ps}}</td>
+        <td>{{doc.ccy}}</td>
+        <td>{{doc.amount}}</td>
+        <td>{{doc.rate}}</td>
+        <td>{{doc.ctr}}</td>
+        <td>{{doc.valueDate}}</td>
+        <td>{{doc.Quoted}}</td>
+        <td>{{doc.marketer}}</td>
+        <td>{{doc.type}}</td>
+        <td>{{doc.source}}</td>
+        <td>{{doc.finalState}}</td>
+        <td>{{doc.isGroup}}</td>
+        <td>{{doc.time}}</td>
       </tr>
     </tbody>
+
   </table>
   </div>
   <div class="row">
   <div class="well">2 Quote(s) 2174615</div>
   <table class="table table-striped">
     <thead>
-      <tr>
+      <tr >
         <th>Detail</th>
         <th>Quote</th>
         <th>BidMarket Allin</th>
@@ -62,7 +63,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a>217</a></td>
+        <td><a  data-toggle="modal" data-target="#myModal">217</a></td>
         <td>41224975</td>
         <td>FX</td>
         <td>A1132745</td>
@@ -76,8 +77,32 @@
   </table>
   </div>
   <div class="row">
+    <a (click)="showStats()">Statistics</a>
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    <!--<button type="button" class="btn btn-info btn-lg" >Open Modal</button>-->
+
+    <div style="display:flex" *ngIf="statistics">
+      <div style="display: block">
+        <canvas style="width:500px;height:300px" baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+      <div style="width:100%">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>FXOL</th>
+          </tr>
+        </thead>
+      </table>
+      </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -86,7 +111,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title"></h4>
                 </div>
                 <div class="modal-body">
                   <div class="row">
