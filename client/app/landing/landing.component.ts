@@ -11,6 +11,7 @@ export class LandingComponent implements OnInit {
   message: string;
   table1Data: any = [];
   statistics: boolean = false;
+  showData: boolean = false;
 
   constructor(private _http: Http) {
 
@@ -35,6 +36,11 @@ export class LandingComponent implements OnInit {
 
   public chartHovered(e:any):void {
     console.log(e);
+  }
+
+  public open() {
+    console.log('dblclick');
+    this.showData = true
   }
 
   public showStats() {
